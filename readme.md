@@ -29,6 +29,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-Created by Your Name - [this.ilecy@gmail.com](mailto:this.ilecy@gmail.com)
+Created by ILECY team, Amirhosein Mardani - [this.ilecy@gmail.com](mailto:this.ilecy@gmail.com)
 
-Project Link: https://github.com/yourusername/sqlx-query-builder
+Project Link: https://github.com/this-ILECY/sqlx-clean-querybuilder
