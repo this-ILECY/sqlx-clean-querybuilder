@@ -1,6 +1,6 @@
 [package]
-name = "sqlx_clean_querybuidler"
-version = "0.1.1"
+name = "sqlx_clean_querybuilder"
+version = "0.1.2"
 edition = "2024"
 authors = ["this.ilecy@gmail.com"]
 description = "Simple, clean querybuidler for sqlx!"
@@ -13,6 +13,6 @@ keywords = ["rust", "library", "sqlx", "querybuilder", "postgresql"]
 sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres"] }
 
 [lib]
-name = "sqlx_clean_querybuidler"
+name = "sqlx_clean_querybuilder"
 path = "src/lib.rs"
 crate-type = ["lib"]

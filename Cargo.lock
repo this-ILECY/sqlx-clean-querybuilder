@@ -1371,8 +1371,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "sqlx_clean_querybuidler"
-version = "0.1.1"
+name = "sqlx_clean_querybuilder"
+version = "0.1.2"
 dependencies = [
  "sqlx",
 ]
