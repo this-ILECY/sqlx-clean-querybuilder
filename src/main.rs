@@ -1,21 +1,31 @@
-use crate::qb::qbs::Query;
+use crate::qb::{query_builder::PostgreSqlQueryBuilder};
 mod qb;
 
 #[tokio::main]
 async fn main() {
-    let inner_select = Query::new()
-        .select("id, name")
-        .table("users")
-        .filter("id = 12")
-        .filter("name LIKE '%mo%'")
+    let query = PostgreSqlQueryBuilder::select()
+        .columns(&["id", "name", "email"])
+        .table("users", None)
+        .distinct()
         .build();
 
-    let query = Query::new()
-        .select("users.id, products.name")
-        .table("users")
-        .join_inner("products", "users.id", "products.userId")
-        .filter("users.id = 12")
+    let insert_query = PostgreSqlQueryBuilder::insert("users")
+        .columns(&["id", "name", "email"])
+        .values(&["1", "'Alice'", "'alice@example.com'"])
+        .returning(&["id"])
         .build();
 
-    println!("{}", query);
+    let update = PostgreSqlQueryBuilder::update("users")
+        .set("name", "'Alice Updated'")
+        .set("email", "'alice@newmail.com'")
+        .filter("id = 1")
+        .returning(&["id", "name"])
+        .build();
+
+    let delete = PostgreSqlQueryBuilder::delete("users")
+        .filter("id = 1")
+        .returning(&["id"])
+        .build();
+
+    println!("{} {} {} {}", query, insert_query, update, delete);
 }
