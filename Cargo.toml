@@ -1,8 +1,18 @@
 [package]
-name = "myapp"
+name = "sqlx_clean_querybuidler"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
+authors = ["this.ilecy@gmail.com"]
+description = "Simple, clean querybuidler for sqlx!"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/this-ILECY/sqlx-clean-querybuilder"
+readme = "README.md"
+keywords = ["rust", "library", "sqlx", "querybuilder", "qb", "postgresql"]
 
 [dependencies]
 sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres"] }
-tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+
+[lib]
+name = "sqlx_clean_querybuidler"
+path = "src/lib.rs"
+crate-type = ["lib"]
