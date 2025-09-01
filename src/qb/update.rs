@@ -1,5 +1,5 @@
 // qb/update.rs
-pub struct UpdateQuery {
+pub(crate) struct UpdateQuery {
     table: String,
     set_clauses: Vec<(String, String)>,
     filter: Vec<String>,
@@ -7,7 +7,7 @@ pub struct UpdateQuery {
 }
 
 impl UpdateQuery {
-    pub fn new(table: &str) -> Self {
+    pub(crate) fn new(table: &str) -> Self {
         Self {
             table: table.to_string(),
             set_clauses: Vec::new(),

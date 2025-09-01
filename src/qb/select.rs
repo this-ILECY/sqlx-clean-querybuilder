@@ -1,4 +1,4 @@
-pub struct SelectQuery {
+pub(crate) struct SelectQuery {
     distinct: bool,
     columns: Vec<String>,
     table: Option<(String, Option<String>)>, // (table, alias)
