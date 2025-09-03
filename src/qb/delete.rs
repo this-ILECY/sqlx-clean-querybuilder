@@ -1,12 +1,12 @@
 // qb/delete.rs
-pub(crate) struct DeleteQuery {
+pub struct DeleteQuery {
     table: String,
     filter: Vec<String>,
     returning: Vec<String>,
 }
 
 impl DeleteQuery {
-    pub(crate) fn new(table: &str) -> Self {
+    pub fn new(table: &str) -> Self {
         Self {
             table: table.to_string(),
             filter: Vec::new(),

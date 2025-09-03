@@ -1,4 +1,4 @@
-pub(crate) struct SelectQuery {
+pub struct SelectQuery {
     distinct: bool,
     columns: Vec<String>,
     table: Option<(String, Option<String>)>, // (table, alias)
@@ -18,7 +18,7 @@ pub enum Order {
 }
 
 impl SelectQuery {
-    pub(crate) fn new() -> Self {
+    pub fn new() -> Self {
         Self {
             distinct: false,
             columns: Vec::new(),

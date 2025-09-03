@@ -1,4 +1,4 @@
-pub(crate) struct InsertQuery {
+pub struct InsertQuery {
     table: String,
     columns: Vec<String>,
     values: Vec<String>,
@@ -6,7 +6,7 @@ pub(crate) struct InsertQuery {
 }
 
 impl InsertQuery {
-    pub(crate) fn new(table: &str) -> Self {
+    pub fn new(table: &str) -> Self {
         Self {
             table: table.to_string(),
             columns: Vec::new(),
