@@ -1,6 +1,6 @@
 [package]
 name = "sqlx_clean_querybuilder"
-version = "0.1.6"
+version = "0.1.7"
 edition = "2024"
 authors = ["this.ilecy@gmail.com"]
 description = "Simple, clean querybuidler for sqlx!"
@@ -8,9 +8,6 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/this-ILECY/sqlx-clean-querybuilder"
 readme = "README.md"
 keywords = ["rust", "library", "sqlx", "querybuilder", "postgresql"]
-
-[dependencies]
-sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres"] }
 
 [lib]
 name = "sqlx_clean_querybuilder"
