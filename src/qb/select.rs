@@ -124,7 +124,7 @@ impl SelectQuery {
 
         // FROM
         if let Some((table, alias)) = self.table {
-            let mut clause = format!("FROM {}", table);
+            let mut clause = format!("FROM \"{}\"", table);
             if let Some(a) = alias {
                 clause.push_str(&format!(" AS {}", a));
             }
